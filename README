@@ -1,0 +1,66 @@
+# Tableau to Power BI Converter
+
+An automated tool for converting Tableau workbooks (.twbx) to Power BI (.pbix) files with high visual fidelity.
+
+## Features
+
+- **Fully Automated Conversion**: Upload a .twbx file, get a ready-to-use .pbix file
+- **AI-Powered Visual Mapping**: Intelligent mapping of Tableau visuals to Power BI equivalents
+- **Formula Translation**: Converts Tableau calculations to Power BI DAX formulas
+- **Data Model Preservation**: Maintains your data model and relationships
+- **Dashboard Layout Preservation**: Maintains the layout of your dashboards
+
+## Installation
+
+```bash
+pip install tableau_to_powerbi
+```
+
+## Usage
+
+### Command Line
+
+```bash
+# Basic usage
+tableau2powerbi input.twbx
+
+# Specify output directory
+tableau2powerbi input.twbx -o /path/to/output/directory
+
+# Enable verbose logging
+tableau2powerbi input.twbx -v
+```
+
+### Python API
+
+```python
+from tableau_to_powerbi import TableauToPowerBIConverter
+
+# Create a converter instance
+converter = TableauToPowerBIConverter()
+
+# Convert a file
+output_file = converter.convert('path/to/input.twbx', 'path/to/output/directory')
+print(f"Converted file: {output_file}")
+```
+
+## How It Works
+
+1. **Extract**: The tool extracts and parses the Tableau workbook structure.
+2. **Analyze**: AI-powered analysis identifies visualizations, calculations, and data models.
+3. **Transform**: Converts all Tableau components to their Power BI equivalents.
+4. **Generate**: Creates a valid Power BI file that preserves your dashboards and visuals.
+
+## Limitations
+
+- Some complex Tableau features may require manual adjustment after conversion
+- Custom Tableau extensions are not supported
+- Very complex calculated fields may need manual review
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
